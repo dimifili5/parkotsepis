@@ -4,7 +4,6 @@ import parko from "./assets/parko.jpg"
 
 import Home from "./Home/Home";
 import Contact from "./Contact/Contact";
-import WhatWeDo from "./WhatWeDo/WhatWeDo";
 
 class Initial extends Component{
 
@@ -20,14 +19,13 @@ class Initial extends Component{
   }
 
   expandWhatWeDo=()=>{
-    const toExpandWhatWeDo=this.state.expand;
-    this.setState({expand:!toExpandWhatWeDo});
+    
    
     
 
   }
 
-  expandContact=()=>{
+  expandContact=(event)=>{
     const toExpandContact=this.state.expand;
     this.setState({expand:!toExpandContact});
 
@@ -58,26 +56,19 @@ class Initial extends Component{
 
       <button 
       onClick={this.expandWhatWeDo}> What we do</button>
-       {this.state.expand?
-      <div>
-
-        <WhatWeDo />
-      </div>:null}
-
-      <button
-      onClick={this.expandContact}>Contact</button>
-
-     {this.state.expand?
-      <div>
-
-        <Contact />
-      </div>:null}
 
         
       
     
 
-      
+      <button 
+      onClick={this.expand}>Contact</button>
+
+      {this.state.expandContact?
+      <div >
+
+      <p>thyrhr</p>  
+      </div>:null}
 
       <div style={{backgroundImage:`url(${parko})`}}> welcome to park</div>
       
