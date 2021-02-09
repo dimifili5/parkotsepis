@@ -2,9 +2,8 @@ import React from "react";
 
 const Home =(props)=>{
     const txtstyle={
-        
-        color:"red",
-        
+        backgroundImage:"linear-gradient(120deg, rgb(46, 70, 148) 0%, #326c92 100%)",
+        color:"black",        
         textAlign:"center",
         fontDisplay:"block",
         border:"2px red"

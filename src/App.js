@@ -4,21 +4,29 @@ import parko from "./assets/parko.jpg"
 
 import Home from "./Home/Home";
 import Contact from "./Contact/Contact";
+import WhatWeDo from "./WhatWeDo/WhatWeDo";
+
 
 class Initial extends Component{
 
+  
+
   state={
     name:"Παρκο Τσεπης",
-    expand:false}
+    expandome:false,
+    expandwhatwedo:false,
+  expandcontact:false}
 
   expandHome=()=>{
     const toExpandHome=this.state.expand;
-    this.setState({expand:!toExpandHome});
+    this.setState({expandhome:!toExpandHome});
     
 
   }
 
   expandWhatWeDo=()=>{
+    const toExpandWhatWeDo=this.state.expand;
+    this.setState({expandwhatwedo:!toExpandWhatWeDo});
     
    
     
@@ -37,25 +45,34 @@ class Initial extends Component{
   render(){
     return(
       <div>
+        {/*BACKROUND IMAGE */}
+
         <div style={{backgroundImage:`url(${parko})`}}>
         <h1>ΠΑΡΚΟ ΤΣΕΠΗΣ..under construction</h1>
       </div>
 
 
-
+       {/*HOME BUTTON */}
       <button
       onClick={this.expandHome}>Home</button>
-       {this.state.expand?
-      <div className="Home">
-
-        <Home />
-      </div>:null
       
+      
+       {this.state.expandhome?
+       
+      <div className="Home"> 
+        <Home />            
+      </div>:null}
+         
     
-    } 
-
+      {/*WHAT WE DO BUTTON */}
       <button 
       onClick={this.expandWhatWeDo}> What we do</button>
+
+      {this.state.expandwhatwedo?
+       <div >
+        <WhatWeDo />
+      </div>:null}
+      
 
         
       
