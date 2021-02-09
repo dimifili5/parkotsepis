@@ -15,17 +15,17 @@ class Initial extends Component{
     name:"Παρκο Τσεπης",
     expandome:false,
     expandwhatwedo:false,
-  expandcontact:false}
+    expandcontact:false}
 
   expandHome=()=>{
-    const toExpandHome=this.state.expand;
+    const toExpandHome=this.state.expandhome;
     this.setState({expandhome:!toExpandHome});
     
 
   }
 
   expandWhatWeDo=()=>{
-    const toExpandWhatWeDo=this.state.expand;
+    const toExpandWhatWeDo=this.state.expandwhatwedo
     this.setState({expandwhatwedo:!toExpandWhatWeDo});
     
    
@@ -34,8 +34,8 @@ class Initial extends Component{
   }
 
   expandContact=(event)=>{
-    const toExpandContact=this.state.expand;
-    this.setState({expand:!toExpandContact});
+    const toExpandContact=this.state.expandcontact;
+    this.setState({expandcontact:!toExpandContact});
 
 
   }
